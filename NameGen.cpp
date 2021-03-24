@@ -1,4 +1,4 @@
-#include <NameGen.h>
+#include "include/NameGen.h"
 
 string NameGenerator::GenerateName(int len)
 {
