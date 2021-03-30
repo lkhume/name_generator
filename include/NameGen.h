@@ -1,6 +1,11 @@
 //Include files
 #include <random>
 #include <iostream>
+#ifdef _WIN32
+#indluce <Windows.h>
+#else
+#include <unistd.h>
+#endif
 
 //Definitions
 #define MAX_NAME_LENGTH 9
@@ -23,5 +28,3 @@ class NameGenerator
         char vowel[5] = {'a', 'e', 'i', 'o', 'u'};
         char consonants[ALPHABET_SIZE - 5] = {'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'};
 };
-
-int main();
