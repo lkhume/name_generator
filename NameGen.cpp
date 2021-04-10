@@ -13,8 +13,6 @@ string NameGenerator::GenerateName(int len)
 
 char NameGenerator::GenerateChar(bool isVowel) const
 {
-    sleep(1);
-    srand(time(NULL));
     if (isVowel)
     {
         return vowel[rand()%5];
@@ -28,6 +26,7 @@ char NameGenerator::GenerateChar(bool isVowel) const
 
 int main()
 {
+    srand((unsigned) time(0));
     NameGenerator NameGen;
     cout << "First Name: " << NameGen.GenerateName(MIN_NAME_LENGTH + rand()%(MAX_NAME_LENGTH - MIN_NAME_LENGTH)) << '\n';
     cout << "Family Name: " << NameGen.GenerateName(MIN_NAME_LENGTH + rand()%(MAX_NAME_LENGTH - MIN_NAME_LENGTH)) << '\n';
